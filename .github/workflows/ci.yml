@@ -1,0 +1,23 @@
+name: CI - HTML Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Validation du HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7
+        with:
+          root: .
+
