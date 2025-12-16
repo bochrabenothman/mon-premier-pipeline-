@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Validation du HTML
-        uses: Cyb3r-Jak3/html5validator-action@v7
+        uses: Cyb3r-Jak3/html5validator-action@v6
         with:
           root: .
 
